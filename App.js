@@ -2,6 +2,7 @@ import * as React from 'react';
 import {View, Text, Button} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import {WebView} from 'react-native-webview';
 
 function HomeScreen({navigation}) {
   return (
@@ -13,11 +14,7 @@ function HomeScreen({navigation}) {
 }
 
 function DetailsScreen() {
-  return (
-    <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-      <Text>Details Screen</Text>
-    </View>
-  );
+  return <WebView source={{uri: 'https://naver.com'}} />;
 }
 
 const Stack = createNativeStackNavigator();
